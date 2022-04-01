@@ -22,7 +22,7 @@ rc=$?
 
 if [ $ rc -eq 0 ]; then
 	echo "Making post-invocation changes....."
-	createPage()
+	createPage();
 
 else
 	echo "Error: assembly falied!"
