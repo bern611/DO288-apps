@@ -13,6 +13,8 @@ echo "Page built on $DATE" >> ./info.html
 echo "Page proudly built by $(whoami)" >> ./info.html 
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
 
+fix-permissions ./
+
 }
 
 echo "Making pre-invocation changes...."
@@ -24,7 +26,7 @@ if [ $rc -eq 0 ];
 then
 	echo "Making post-invocation changes....."
 	createPage
-	echo "hi"
+	echo "Post Invocation changes complete"
 else
 	echo "Error: assembly falied!"
 
