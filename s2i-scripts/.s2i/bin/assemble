@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-function createPage(){
+function createPage () {
 	
 echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
@@ -20,9 +20,11 @@ echo "Making pre-invocation changes...."
 #/usr/libexec/s2i/assemble
 rc=$?
 
-if [ $rc -eq 0 ]; then
+if [ $rc -eq 0 ]; 
+then
 	echo "Making post-invocation changes....."
-	createPage()
+	createPage
+	echo "hi"
 else
 	echo "Error: assembly falied!"
 
